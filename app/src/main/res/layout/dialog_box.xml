@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="257dp"
+    android:layout_height="297dp"
+    android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/dialog_btn_add"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="#999999"
+            app:layout_constraintBottom_toTopOf="@+id/counterText"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_btn_subtrack"
+            app:layout_constraintStart_toStartOf="@+id/dialog_btn_subtrack">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/baseline_add_24"
+                app:tint="@color/white" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/counterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_extra_bold"
+            android:text="01"
+            android:textColor="@color/black"
+            android:layout_marginBottom="25dp"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/dialog_btn_subtrack"
+            app:layout_constraintEnd_toEndOf="@+id/dialog_btn_subtrack"
+            app:layout_constraintStart_toStartOf="@+id/dialog_btn_subtrack" />
+
+        <RelativeLayout
+            android:id="@+id/dialog_btn_subtrack"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="#999999"
+
+            app:layout_constraintBottom_toTopOf="@+id/btn_bag"
+            app:layout_constraintEnd_toEndOf="@+id/btn_bag"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="@+id/btn_bag">
+
+            <View
+                android:layout_width="13.2dp"
+                android:layout_height="2.2dp"
+                android:layout_centerInParent="true"
+                android:background="@color/white" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_bag"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="155dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_bg"
+            android:fontFamily="@font/gilroy_extra_bold"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Add to bag"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

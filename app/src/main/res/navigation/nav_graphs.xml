@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graphs"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/ediblesFragment"
+        android:name="com.example.it_medicusassesmentproject.fragments.EdiblesFragment"
+        android:label="fragment_edibles"
+        tools:layout="@layout/fragment_edibles" >
+        <action
+            android:id="@+id/action_ediblesFragment_to_accessoriesFragment"
+            app:destination="@id/accessoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accessoriesFragment"
+        android:name="com.example.it_medicusassesmentproject.fragments.AccessoriesFragment"
+        android:label="fragment_accessories"
+        tools:layout="@layout/fragment_accessories" />
+    <fragment
+        android:id="@+id/vapesFragment"
+        android:name="com.example.it_medicusassesmentproject.fragments.VapesFragment"
+        android:label="fragment_vapes"
+        tools:layout="@layout/fragment_vapes" >
+        <action
+            android:id="@+id/action_vapesFragment_to_extractsFragment"
+            app:destination="@id/extractsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flowersFragment"
+        android:name="com.example.it_medicusassesmentproject.fragments.FlowersFragment"
+        android:label="fragment_flowers"
+        tools:layout="@layout/fragment_flowers" >
+        <action
+            android:id="@+id/action_flowersFragment_to_vapesFragment"
+            app:destination="@id/vapesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/extractsFragment"
+        android:name="com.example.it_medicusassesmentproject.fragments.ExtractsFragment"
+        android:label="fragment_extracts"
+        tools:layout="@layout/fragment_extracts" >
+        <action
+            android:id="@+id/action_extractsFragment_to_ediblesFragment"
+            app:destination="@id/ediblesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.it_medicusassesmentproject.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_flowersFragment"
+            app:destination="@id/flowersFragment" />
+    </fragment>
+</navigation>
